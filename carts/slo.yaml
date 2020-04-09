@@ -17,6 +17,16 @@ objectives:
       - criteria:
           - "<=800"
     weight: 1
+  - sli: "error_rate"
+    pass:
+      - criteria:
+          - "<=+5%"
+          - "<2"
+    warning:
+      - criteria:
+          - "<5"
+  - sli: "pg_heap_suspension"
+  - sli: "pg_cpu_usage"
 total_score:
   pass: "90%"
   warning: "75%"
